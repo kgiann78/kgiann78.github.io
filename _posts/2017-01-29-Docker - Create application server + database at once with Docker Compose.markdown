@@ -1,22 +1,19 @@
 ---
 layout: post
 title:  "Docker - Create application server + database at once with Docker Compose"
-date:   2016-12-17 23:30:01 +0200
+date:   2017-01-29 21:30:01 +0200
 categories: docker glassfish postgres
 ---
-<html>
-<head></head>
-<body>
-In a previous post we were discussing about glassfish installation in a VM at ~okeanos or Digital Ocean.<br>
-<br>
-But when we start developing we might need also a database side by side our application server. Docker Compose is very useful, especially if we don't want to install all these components to our system or to maximise portability. Compose is a tool that is used to define and run multiple Docker applications.<br>
-<br>
-<strong>Install Docker Compose</strong>
-<br>
+In a previous post we were discussing about glassfish installation in a VM at ~okeanos or Digital Ocean.
+
+But when we start developing we might need also a database side by side our application server. Docker Compose is very useful, especially if we don't want to install all these components to our system or to maximise portability. Compose is a tool that is used to define and run multiple Docker applications.
+
+<h4>Install Docker Compose</h4>
+
 Before using Docker Compose make sure you have installed it on your system. Instructions based on your system are provided at <a href="https://docs.docker.com/compose/install/">Docker Compose</a>.
-<br>
+
 <strong>Create docker-compose file and </strong><b>organise directories</b>
-<br>
+
 To begin with, first create a file named <strong>docker-compose.yml</strong> and place it where you need your services to take place.
 <pre><strong>$docker&gt;</strong>mkdir services
 <strong>$docker&gt;</strong>cd services
@@ -127,5 +124,3 @@ Previously we had only one configuration (db) and the command <strong>docker-com
 In case we need to run <strong>only the db</strong> container run the command:
 <pre><strong>$services&gt;</strong>docker-compose run db</pre>
 Since the ws configuration has link to the db configuration, it will complain if the db is not running.
-</body>
-</html>
