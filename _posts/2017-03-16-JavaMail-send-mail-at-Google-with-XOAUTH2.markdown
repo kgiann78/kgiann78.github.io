@@ -98,7 +98,9 @@ Your code should have access to your Client ID, Client Secret, and Refresh Token
 The script above will refresh the initial token if necessary. Then you can use the accessToken to your code:
 
 1. Create the properties:
-    ##### For JavaMail 1.5.5 and later
+    
+    For JavaMail 1.5.5 and later
+
     Starting with JavaMail 1.5.5, support for [OAuth2 authentication] is built-in and no longer requires SASL (although the SASL OAuth2 support continues to work).
 
     Since OAuth2 uses an "access token" instead of a password, you'll want to configure JavaMail to use only the XOAUTH2 mechanism. The access token is passed as the password, which obviously won't work with any of the other authentication mechanisms. For example, to access Gmail:
@@ -115,7 +117,8 @@ The script above will refresh the initial token if necessary. Then you can use t
         props.put("mail.smtp.ssl.enable", "true"); // required for Gmail
         props.put("mail.smtp.auth.mechanisms", "XOAUTH2");
     
-    ##### For JavaMail 1.5.2 to 1.5.4
+    For JavaMail 1.5.2 to 1.5.4
+
     For JavaMail 1.5.2 to 1.5.4, support for OAuth2 authentication via the SASL XOAUTH2 mechanism is included.
 
     The SASL XOAUTH2 provider will be added to the Java security configuration when SASL support is first used. The application must have the permission SecurityPermission("insertProvider.JavaMail-OAuth2").
