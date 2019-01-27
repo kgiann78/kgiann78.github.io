@@ -14,7 +14,7 @@ keep_files:
 
 
 # Site settings
-title: Airspace
+title: My Personal site
 subtitle: "A free HTML5 agency template"
 url: "https://kgiann78.github.io" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
@@ -31,7 +31,10 @@ markdown: kramdown
 # Category descriptions (for archive pages)
 descriptions:
   - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+    desc: "A personal blog for things that I tried hard to make work..."
 
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
+
+twitter_username: kgiann78
+github_username:  kgiann78
