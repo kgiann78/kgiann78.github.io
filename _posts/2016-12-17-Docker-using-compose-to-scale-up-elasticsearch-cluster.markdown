@@ -3,6 +3,7 @@ layout: post
 title:  "Docker - Using Compose to scale up elasticsearch cluster"
 date:   2016-12-17 23:30:01 +0200
 categories: docker elasticsearch
+page.author: Konstantinos
 ---
 
 In a previous <a href="http://blog.codingtimes.com/docker-elastic-search-create-a-cluster-with-multiple-nodes/" target="_blank">post</a> we' ve shown how to create a cluster in elasticsearch with manually defined nodes. In this post we use docker compose to scale things up!

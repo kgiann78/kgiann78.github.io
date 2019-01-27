@@ -5,8 +5,6 @@ date:   2017-03-22 11:00:01 +0200
 categories: github
 ---
 
-# Git Merge changes from original repository to a forked one
-
 Like many I forked a repository from GitHub in order to work on it. After a while I needed to update my version with commits and updates from the original repository. 
 In a brief search in the internet I came into the same question at 
 [stackoverflow](http://stackoverflow.com/questions/3903817/pull-new-updates-from-original-github-repository-into-forked-github-repository).
