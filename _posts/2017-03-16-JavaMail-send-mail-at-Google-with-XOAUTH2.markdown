@@ -160,10 +160,10 @@ The script above will refresh the initial token if necessary. Then you can use t
         Store store = session.getStore("imap");
         store.connect("imap.gmail.com", username, accessToken);
 
-    For smpt:
+    For smtp:
         
         Session session = Session.getInstance(props);
-        Transport transport = session.getTransport("smpt");
+        Transport transport = session.getTransport("smtp");
         transport.connect("smtp.gmail.com", username, accessToken);
         transport.send(msg, msg.getAllRecipients());
 
