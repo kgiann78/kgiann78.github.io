@@ -6,12 +6,12 @@ categories:
 tags: [python, mock, decorator]
 ---
 
-# Mock decorator during tests to override its parameters
+# Mock a decorated function during tests to override its parameters
 
 
-What happens if you want to mock a decorated method during tests? And in what kind of scenarios you need this?
+What happens if you want to mock a decorated method during tests? And in what kind of scenarios do you need this?
 
-As one can find, there are various articles in Stackoverflow and all around about cases where people needs to mock a decorated method, 
+As one can find, there are various articles in Stackoverflow and elsewhere, that cover cases where people needs to mock a decorated method, 
 mainly in order to change the functionality of the decorator during tests.
 
 In those articles, you'll find out that, decorators are applied at the time that a module is imported. 
@@ -20,16 +20,16 @@ Any attempt to patch it later, without reloading it, the patch would have no eff
 
 I've found to very helping questions in stackoverflow about this issue:
 
-* https://stackoverflow.com/questions/19812570/how-to-mock-a-decorated-function
-* https://stackoverflow.com/questions/7667567/can-i-patch-a-python-decorator-before-it-wraps-a-function
+* [How to mock a decorated function](https://stackoverflow.com/questions/19812570/how-to-mock-a-decorated-function)
+* [Can I patch a python decorator before it wraps a function?](https://stackoverflow.com/questions/7667567/can-i-patch-a-python-decorator-before-it-wraps-a-function)
 
-But that wasn't my case... 
+But that wasn't my case...
 
 ## What if you want to actually change how the decorator is called, but not the decorator itself?
 
-A specific case I was dealing with was how to change a decorator's call and pass as arguments specific values that I needed for testing.
+A case that I was dealing with was how to change a decorator's call and pass as arguments specific values that I needed for testing.
 
-I was working with Piston3 for Python and I had a custom handler where I needed to run some tests to validate that the throttle policy was applied.
+I was working with Piston3 for Python and I had a custom handler where I needed to run some tests in order to validate that the throttle policy was applied.
 Piston is an old project but it is very useful for my example. If you want to check some code you'll find it at 
 [the github repo](https://github.com/userzimmermann/django-piston3) since it seems that all bitbucket links are not working...
 
